@@ -18,7 +18,7 @@ public class Main {
 
     static String isConsecutive(int[] a, int[] b) {
         int size = b.length;
-        for (int i = 0; i < a.length - size; i++) {
+        for (int i = 0; i <= a.length - size; i++) {
             boolean find = false;
             for (int j = 0; j < size; j++) {
                 

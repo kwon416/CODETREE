@@ -13,18 +13,17 @@ public class Main {
         for (int i = 0; i < m1 - 1; i++) {
             days1 += daysOfMonth[i]; 
         }
-        days1 = d1;
+        days1 += d1;
         int days2 = 0;
         for (int i = 0; i < m2 - 1; i++) {
             days2 += daysOfMonth[i];
         }
-        days2 = d2;
+        days2 += d2;
         String[] days = {"Mon", "Tue", "wed", "Thu", "Fri", "Sat", "Sun"}; 
         int diff = days2 - days1;
-        if (diff >= 0) {
-            System.out.println(days[diff % 7]);
-        } else {
-            System.out.println(days[6 - (-1 * diff % 7 - 1)]);
+        while (diff < 0) {
+            diff += 7;
         }
+        System.out.println(days[diff % 7]);
     }
 }

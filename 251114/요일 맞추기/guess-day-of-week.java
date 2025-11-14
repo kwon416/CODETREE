@@ -19,7 +19,7 @@ public class Main {
             days2 += daysOfMonth[i];
         }
         days2 += d2;
-        String[] days = {"Mon", "Tue", "wed", "Thu", "Fri", "Sat", "Sun"}; 
+        String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}; 
         int diff = days2 - days1;
         while (diff < 0) {
             diff += 7;

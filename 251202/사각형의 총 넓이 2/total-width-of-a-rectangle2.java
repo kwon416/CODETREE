@@ -9,10 +9,10 @@ public class Main {
         int[] y2 = new int[n];
         int[][] area = new int[201][201];
         for (int i = 0; i < n; i++) {
-            x1[i] = sc.nextInt();
-            y1[i] = sc.nextInt();
-            x2[i] = sc.nextInt();
-            y2[i] = sc.nextInt();
+            x1[i] = sc.nextInt()+ 100;
+            y1[i] = sc.nextInt()+ 100;
+            x2[i] = sc.nextInt()+ 100;
+            y2[i] = sc.nextInt()+ 100;
 
             setArea(area, x1[i], x2[i], y1[i], y2[i]);
         }

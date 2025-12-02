@@ -27,16 +27,21 @@ public class Main {
         }
 
         int minX = 2001, maxX = 0, minY = 2001 , maxY = 0;
-
+        boolean firestRectExist = false;
         for (int i = 0; i < 2001; i++) {
             for (int j = 0; j < 2001; j++) {
                 if (area[i][j] == 1) {
+                    firestRectExist = true;
                     minX = Math.min(minX, i);
                     maxX = Math.max(maxX, i);
                     minY = Math.min(minY, j);
                     maxY = Math.max(maxY, j);
                 }
             }
+        }
+        if (!firestRectExist) {
+            System.out.print(0);
+            return;
         }
         System.out.println((maxX - minX) * (maxY - minY));
     }

@@ -19,6 +19,7 @@ public class Main {
                 startIdx = i;
             }
         }
+        maxCount = Math.max(maxCount, n - startIdx);
         System.out.println(maxCount);
     }
 }

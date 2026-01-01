@@ -12,7 +12,7 @@ public class Main {
         int cnt = 0;
         int ans = 0;
         for (int i = 0; i < n; i++) {
-            if (arr[i] > t && i >= 1) {
+            if (arr[i] > t) {
                 cnt++;
             } else {
                 cnt = 0;

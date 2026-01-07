@@ -35,22 +35,21 @@ public class Main {
         int count = 0;
         int headIndex = 0;
 
-        for (int i = 1; i < 1000000; i++) {
-            int index = getHead(location[i][0], location[i][1]);
-            if (index != -1 && headIndex != index) {
-                count++;
-                headIndex = index;
+        for (int i = 1; i < indexA; i++) {
+            if (location[i][0] > location[i][1]) {
+                if (headIndex == 2) {
+                    count++;
+                }
+                headIndex= 1;
+            } else if (location[i][0] < location[i][1]) {
+                if (headIndex == 1) {
+                    count++;
+                }
+                headIndex = 2;
             }
-            if (location[i][0] == 0 && location[i][1] == 0) break;
         }
+        System.out.print(count);
 
-        System.out.print(count == 0 ? count : count - 1);
     }
 
-    public static int getHead(int i, int j) {
-        int head = i - j;
-        if (head == 0) return -1;
-        if (head > 0) return 0;
-        return 1;
-    }
 }

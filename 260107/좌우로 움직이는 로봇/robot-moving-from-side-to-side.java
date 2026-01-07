@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] A = new int[1000000];
+        int[] A = new int[1000001];
         int indexA = 1;
         for (int i = 0; i < n; i++) {
             int t = sc.nextInt();
@@ -20,7 +20,7 @@ public class Main {
                 indexA++;
             }
         }
-        int[] B = new int[1000000];
+        int[] B = new int[1000001];
         int indexB = 1;
         for (int i = 0; i < m; i++) {
             int t = sc.nextInt();

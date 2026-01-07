@@ -48,6 +48,7 @@ public class Main {
         for (int i = 1; i < 1000000; i++) {
             // System.out.println(A[i] + " " + B[i]);
             if (A[i] == B[i]) {
+                if (A[i] == 0 && B[i] == 0) break;
                 index  = i;
                 break;
             }

@@ -47,17 +47,13 @@ public class Main {
         }
 
         int count  = 0;
-        int prev = 0;
         int timeMax = 0;
         if(indexA < indexB)
             timeMax = indexB;
         else
             timeMax = indexA;
-        for (int i = 2 ; i < timeMax; i++) {
-            int next = A[i] - B[i];
-            if (prev != 0 && next == 0) count++;
-            prev = next;
-
+        for (int i = 1 ; i < timeMax; i++) {
+            if (A[i] == B[i] && A[i - 1] != B[i - 1]) count++;
         }
         System.out.print(count);
         // Please write your code here.

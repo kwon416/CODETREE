@@ -35,9 +35,20 @@ public class Main {
                 indexB++;
             }
         }
+
+        if (indexA < indexB) {
+            for (int i = indexA; i < indexB; i++) {
+                A[i] = A[i - 1];
+            }
+        } else if (indexA >indexB) {
+            for (int i = indexB; i < indexA; i++) {
+                B[i] = B[i - 1];
+            }
+        }
+
         int count  = 0;
         int prev =  0;
-        for (int i = 1 ; i < indexB + 1; i++) {
+        for (int i = 2 ; i < indexB; i++) {
             int next = A[i] - B[i];
             if (prev != 0 && next == 0) count++;
             prev = next;

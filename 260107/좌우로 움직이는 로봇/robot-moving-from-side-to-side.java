@@ -47,8 +47,13 @@ public class Main {
         }
 
         int count  = 0;
-        int prev =  0;
-        for (int i = 2 ; i < indexB; i++) {
+        int prev = 0;
+        int timeMax = 0;
+        if(indexA < indexB)
+            timeMax = indexB;
+        else
+            timeMax = indexA;
+        for (int i = 2 ; i < timeMax; i++) {
             int next = A[i] - B[i];
             if (prev != 0 && next == 0) count++;
             prev = next;

@@ -27,7 +27,7 @@ public class Main {
 
             x += dx[dir];
             y += dy[dir];
-            grid[x][y] = (char) (c + i);
+            grid[x][y] = (char) (c + (i % 26));
 
         }
 

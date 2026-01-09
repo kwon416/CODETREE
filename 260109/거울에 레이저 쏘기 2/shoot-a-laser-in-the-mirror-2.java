@@ -37,10 +37,7 @@ public class Main {
             return 3 - dir;
         } else {
             // 3 <-> 2, 1 <-> 0
-            if (dir == 3) return 2;
-            if (dir == 2) return 3;
-            if (dir == 1) return 0;
-            return 1;
+            return dir ^ 1;
         }
     }
 
@@ -62,11 +59,11 @@ public class Main {
         } else if (k <= 3 * n) {
             arr[0] = n - 1;
             arr[1] = 3 * n - k;
-            arr[2] = 0;
+            arr[2] = 3;
         } else {
             arr[0] = 4 * n - k;
             arr[1] = 0;
-            arr[2] = 3;
+            arr[2] = 0;
         }
         return arr;
     }

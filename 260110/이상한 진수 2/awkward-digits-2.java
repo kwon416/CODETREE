@@ -6,17 +6,16 @@ public class Main {
         // Please write your code here.
         
         
-        for (int i = 1; i < a.length(); i++) {
+        int max = 0;
+        for (int i = 0; i < a.length(); i++) {
             char c = a.charAt(i);
-            if (c == '0') {
-                String head = a.substring(0,i);
-                String tail = a.substring(i+1, a.length());
-                a = head + "1" + tail;
-                
-                break;
-            }
+            String change = c == '0' ? "1" : "0";
+            String head = a.substring(0, i);
+            String tail = a.substring(i + 1, a.length());
+            String result = head + change + tail;
+            max = Math.max(max, Integer.parseInt(result, 2));
         }
 
-        System.out.println(Integer.parseInt(a, 2));
+        System.out.println(max);
     }
 }

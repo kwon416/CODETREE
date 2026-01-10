@@ -12,9 +12,12 @@ public class Main {
                 String head = a.substring(0,i);
                 String tail = a.substring(i+1, a.length());
                 ans = head + "1" + tail;
-                System.out.println(Integer.parseInt(ans, 2));
+                
                 break;
             }
         }
+        int answer = 0;
+        if (!ans.equals("")) answer = Integer.parseInt(ans, 2);
+        System.out.println(answer);
     }
 }

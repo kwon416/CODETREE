@@ -18,7 +18,7 @@ public class Main {
         for (int i = 0; i < 19; i++) {
             for (int j = 0; j < 19; j++) {
                 // 가로 체크
-                if (j < 14) {
+                if (j <= 14) {
                     if (arr[i][j] == 2 && arr[i][j+1] == 1 && arr[i][j+2] == 1 && arr[i][j+3] == 1 && arr[i][j+4] == 1) {
                         ans = 1;
                         x = i;
@@ -32,7 +32,7 @@ public class Main {
                 }
 
                 // 세로 체크
-                if (i < 14) {
+                if (i <= 14) {
                     if (arr[i][j] == 1 && arr[i + 1][j] == 1 && arr[i + 2][j] == 1 && arr[i + 3][j] == 1 && arr[i + 4][j] == 1)  {
                         ans = 1;
                         x = i + 2;
@@ -59,7 +59,7 @@ public class Main {
                         y = j + 2;
                     }
                 }
-                if (i < 14 && j >= 4) {
+                if (i <= 14 && j >= 4) {
                     // /모양
                     if (arr[i][j] == 1 && arr[i + 1][j - 1] == 1 && arr[i + 2][j - 2] == 1 && arr[i + 3][j - 3] == 1 && arr[i + 4][j - 4] == 1) {
                         ans = 1;

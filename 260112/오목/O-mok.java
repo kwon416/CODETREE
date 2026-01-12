@@ -19,7 +19,7 @@ public class Main {
             for (int j = 0; j < 19; j++) {
                 // 가로 체크
                 if (j <= 14) {
-                    if (arr[i][j] == 2 && arr[i][j+1] == 1 && arr[i][j+2] == 1 && arr[i][j+3] == 1 && arr[i][j+4] == 1) {
+                    if (arr[i][j] == 1 && arr[i][j+1] == 1 && arr[i][j+2] == 1 && arr[i][j+3] == 1 && arr[i][j+4] == 1) {
                         ans = 1;
                         x = i;
                         y = j + 2;

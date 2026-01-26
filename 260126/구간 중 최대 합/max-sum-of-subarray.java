@@ -11,7 +11,7 @@ public class Main {
         int ans = 0;
         for (int i = 0; i < n - k ; i++) {
             int sum = 0;
-            for (int j = 1; j <= k; j++) {
+            for (int j = 0; j < k; j++) {
                 sum += arr[i + j];
             }
             ans = Math.max(ans, sum);

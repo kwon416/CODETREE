@@ -15,11 +15,11 @@ public class Main {
                 for (int k = i; k <= j; k++) {
                     sum += arr[k];
                 }
-                double avg = (j - i);
+                double avg = (double) sum / (j - i + 1);
                 for (int k = i; k <= j; k++) {
                     if (avg == (double) arr[k]) {
                         ans++;
-                        // break;
+                        break;
                     }
                 }
             }

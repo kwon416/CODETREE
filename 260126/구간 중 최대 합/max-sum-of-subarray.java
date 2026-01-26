@@ -9,10 +9,10 @@ public class Main {
             arr[i] = sc.nextInt();
         // Please write your code here.
         int ans = 0;
-        for (int i = 0; i < n - k ; i++) {
+        for (int i = 0; i <= n - k ; i++) {
             int sum = 0;
-            for (int j = 0; j < k; j++) {
-                sum += arr[i + j];
+            for (int j = i; j < i + k; j++) {
+                sum += arr[j];
             }
             ans = Math.max(ans, sum);
         }

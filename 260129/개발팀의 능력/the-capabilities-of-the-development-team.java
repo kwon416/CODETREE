@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class Main {
     public static int[] abil;
@@ -11,6 +12,8 @@ public class Main {
             sum += abil[i];
         }
         // Please write your code here.
+
+        // i,j / k, l / 나머지
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < 5; i++) {
             for (int j = i + 1; j < 5; j++) {
@@ -26,6 +29,7 @@ public class Main {
                 }
             }
         }
+        if (min == Integer.MAX_VALUE) min = -1;
         System.out.print(min);
     }
 
@@ -33,7 +37,6 @@ public class Main {
         int team1 = abil[i] + abil[j];
         int team2 = abil[k] + abil[l];
         int team3 = sum - team1 - team2;
-        if (team1 == team2 || team2 == team3 || team3 == team1) return 0;
 
         int max = Math.max(team1, Math.max(team2, team3));
         int min = Math.min(team1, Math.min(team2, team3));

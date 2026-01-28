@@ -37,6 +37,7 @@ public class Main {
         int team1 = abil[i] + abil[j];
         int team2 = abil[k] + abil[l];
         int team3 = sum - team1 - team2;
+        if (team1 == team2 || team2 == team3 || team3 == team1) return 0;
 
         int max = Math.max(team1, Math.max(team2, team3));
         int min = Math.min(team1, Math.min(team2, team3));

@@ -24,7 +24,7 @@ public class Main {
             int cnt = 0;
             for (int j = 0; j < n; j++) {
                 nb -= np[j];
-                if (nb <= 0) {
+                if (nb < 0) {
                     break;
                 }
                 cnt++;

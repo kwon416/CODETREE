@@ -19,7 +19,7 @@ public class Main {
                     int yLen = 0;
                     if (y[i] == y[j]) xLen = Math.abs(x[i] - x[j]);
                     if (y[k] == y[j]) xLen = Math.abs(x[k] - x[j]);
-                    if (y[i] == y[k]) xLen = Math.abs(x[i] - x[j]);
+                    if (y[i] == y[k]) xLen = Math.abs(x[i] - x[k]);
 
                     if (x[i] == x[j]) yLen = Math.abs(y[i] - y[j]);
                     if (x[i] == x[k]) yLen = Math.abs(y[i] - y[k]);

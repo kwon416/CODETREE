@@ -13,21 +13,48 @@ public class Main {
         // Please write your code here.
         int ans = 0;
 
-        for (int i = 0; i <= 20; i++) {
-            for (int j = 0; j <= 20; j++) {
-                for (int k = 0; k <= 20; k++) {
+        for (int i = 0; i <= 10; i++) {
+            for (int j = 0; j <= 10; j++) {
+                for (int k = 0; k <= 10; k++) {
                     boolean flag = true;
-                    // 세 선을 찍고
-                    // 모든 점이 세 선 위에 있다면 가능
+                    // x 축 세개
                     for (int l = 0; l < n; l++) {
-                        if (x[l] != i && x[l] != j && x[l] != k &&
-                            y[l] != i && y[l] != j && y[l] != k
-                        ) {
-                            //선 위에 없음
-                            flag = false;
+                        if (x[l] == i || x[l] ==j || x[l] ==k) {
+                            continue;
                         }
+                        flag = false;
                     }
-                    // 
+                    
+                    if (flag) ans = 1;
+
+                    // x축 2개 y축 1개
+                    flag = true;
+                    for (int l = 0; l < n; l++) {
+                        if (x[l] == i || x[l] == j || y[l] == k) {
+                            continue;
+                        }
+                        flag = false;
+                    }
+                    if (flag) ans = 1;
+
+                    // x축 1개 y축 2개
+                    flag = true;
+                    for (int l = 0; l < n; l++) {
+                        if (x[l] == i || y[l] == j || y[l] == k) {
+                            continue;
+                        }
+                        flag = false;
+                    }
+                    if (flag) ans = 1;
+
+                    // y 3개
+                    flag = true;
+                    for (int l = 0; l < n; l++) {
+                        if (y[l] == i || y[l] == j || y[l] == k) {
+                            continue;
+                        }
+                        flag = false;
+                    }
                     if (flag) ans = 1;
                 }
             }    

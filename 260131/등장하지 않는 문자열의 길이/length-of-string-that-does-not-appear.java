@@ -16,7 +16,7 @@ public class Main {
             for (int j = 0; j <= n - i; j++) {
                 target = str.substring(j, j + i);
 
-                for (int k = j + i; k <= n - i; k++) {
+                for (int k = j + 1; k <= n - i; k++) {
                     if (str.substring(k, k+i).equals(target)) {
                         appear = true;
                     }

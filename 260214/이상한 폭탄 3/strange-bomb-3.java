@@ -21,9 +21,8 @@ public class Main {
                 }
             }
             int explode = 0;
-            for (int j = 1; j < cnt; j++) {
-                if (dist[j] - dist[j - 1] <= k) {
-                    if (explode == 0) explode++;
+            for (int j = 1; j < cnt - 1; j++) {
+                if (dist[j] - dist[j - 1] <= k || dist[j + 1] - dist[j] <= k) {
                     explode++;
                 }
             }

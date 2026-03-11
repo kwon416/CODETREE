@@ -14,14 +14,13 @@ public class Main {
             for (int i = 0; i < n; i++) {
                 if (a[i] >= h) {
                     cnt++;
-                }
-                if (nl > 0 && a[i] + 1 >= h) {
+                } else if (nl > 0 && a[i] + 1 >= h) {
                     cnt++;
                     nl--;
                 }
             }
 
-            if (cnt < h || nl < 0) {
+            if (cnt < h) {
                 System.out.print(h - 1);
                 break;
             }

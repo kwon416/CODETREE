@@ -28,7 +28,7 @@ public class Main {
                 cnt += nums[j];
             }
             
-            if (possible && section == m) {
+            if (possible && section <= m) {
                 ans = Math.min(ans, i);
             }
         }
